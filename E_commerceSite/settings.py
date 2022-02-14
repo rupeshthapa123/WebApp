@@ -157,11 +157,3 @@ django_heroku.settings(locals())
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media/'
-<<<<<<< HEAD
-=======
-
-try:
-    from local_settings import *
-except ImportError:
-    pass
->>>>>>> 4f423458b36e729b9c1db24536ee9be3b1873f89
