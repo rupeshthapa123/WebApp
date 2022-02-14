@@ -26,9 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'q@nrrmh5v033-i7xk%(t$+sij1*1q%h-&3=nsp7ymcoe7hh%*4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['liteyagamee.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['liteyagamee.herokuapp.com', 'vue3ecommerce.herokuapp.com', 'localhost']
 
 STRIPE_SECRET_KEY = 'sk_test_51JZs3TEB4cfHqdp2Hvq1N9VgDMvCVjNmV7eVYmjoIJmBkzLHuH4a5mVWXK9NsXSPfNLb7cMbW7wZTHdfzvL6uRa90010ZIY5Dg'
 # Application definition
@@ -59,7 +59,7 @@ CORS_ALLOWED_ORIGINS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -92,22 +92,22 @@ WSGI_APPLICATION = 'E_commerceSite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'd8vom6te2ogp3v',
-#         'USER': 'smmgnjchxjemxa',
-#         'PASSWORD': '729b4be871a88e6794eff0052d49c6fbd2aa838627f5911d64d10ad86d2d6d4d',
-#         'HOST': 'ec2-34-236-87-247.compute-1.amazonaws.com',
-#         'Port' : '5432',
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd8vom6te2ogp3v',
+        'USER': 'smmgnjchxjemxa',
+        'PASSWORD': '729b4be871a88e6794eff0052d49c6fbd2aa838627f5911d64d10ad86d2d6d4d',
+        'HOST': 'ec2-34-236-87-247.compute-1.amazonaws.com',
+        'Port' : '5432',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -150,15 +150,10 @@ STATIC_URL = '/static/'
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR, 'dist/static')
 # ]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 django_heroku.settings(locals())
 
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media/'
-
-try:
-    from local_settings import *
-except ImportError:
-    pass
