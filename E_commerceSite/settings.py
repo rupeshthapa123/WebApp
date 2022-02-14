@@ -53,7 +53,9 @@ INSTALLED_APPS = [
 # CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8080"
+    "http://localhost:8080",
+    "https://liteyagamee.herokuapp.com",
+    "https://vue3ecommerce.herokuapp.com",
 ]
 
 
