@@ -92,22 +92,22 @@ WSGI_APPLICATION = 'E_commerceSite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'd8vom6te2ogp3v',
-#         'USER': 'smmgnjchxjemxa',
-#         'PASSWORD': '729b4be871a88e6794eff0052d49c6fbd2aa838627f5911d64d10ad86d2d6d4d',
-#         'HOST': 'ec2-34-236-87-247.compute-1.amazonaws.com',
-#         'Port' : '5432',
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd8vom6te2ogp3v',
+        'USER': 'smmgnjchxjemxa',
+        'PASSWORD': '729b4be871a88e6794eff0052d49c6fbd2aa838627f5911d64d10ad86d2d6d4d',
+        'HOST': 'ec2-34-236-87-247.compute-1.amazonaws.com',
+        'Port' : '5432',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
