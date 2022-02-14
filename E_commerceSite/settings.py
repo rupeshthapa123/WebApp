@@ -50,11 +50,11 @@ INSTALLED_APPS = [
     'order'
 ]
 
-CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
-    "vue3ecommerce.herokuapp.com"
+    "https://vue3ecommerce.herokuapp.com/"
 ]
 
 
