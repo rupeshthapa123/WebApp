@@ -44,13 +44,13 @@ class Product(models.Model):
     
     def get_thumbnail(self):
         if self.thumbnail:
-            return 'https://liteyagamee.herokuapp.com/' + self.thumbnail.url
+            return 'https://liteyagamee.herokuapp.com' + self.thumbnail.url
         else:
             if self.image:
                 self.thumbnail = self.make_thumbnail(self.image)
                 self.save()
 
-                return 'https://liteyagamee.herokuapp.com/' + self.thumbnail.url
+                return 'https://liteyagamee.herokuapp.com' + self.thumbnail.url
             else:
                 return ''
 
